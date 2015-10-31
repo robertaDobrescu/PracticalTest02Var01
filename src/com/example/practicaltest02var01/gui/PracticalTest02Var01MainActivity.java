@@ -2,8 +2,6 @@ package com.example.practicaltest02var01.gui;
 
 import com.example.practicaltest02var01.utilities.*;
 import com.example.practicaltest02var01.networkingthreads.*;
-
-
 import com.example.practicaltest02var01.R;
 
 import android.app.Activity;
@@ -24,7 +22,6 @@ public class PracticalTest02Var01MainActivity extends Activity {
 		
 		private EditText     clientAddressEditText    = null;
 		private EditText     clientPortEditText       = null;
-
 
 		private Button       getTemp = null;
 		private Button       getHumidity = null;
@@ -83,7 +80,6 @@ public class PracticalTest02Var01MainActivity extends Activity {
 					return;
 				}
 				
-				
 				weatherForecastTextView.setText(Constants.EMPTY_STRING);
 				String infoType = null;
 				 switch(view.getId()) {
@@ -96,7 +92,7 @@ public class PracticalTest02Var01MainActivity extends Activity {
 				 case R.id.bAll:
 					 infoType = Constants.ALL;
 					 break;
-				 }
+				}
 				
 				clientThread = new ClientThread(
 						clientAddress,
@@ -119,8 +115,6 @@ public class PracticalTest02Var01MainActivity extends Activity {
 			clientAddressEditText = (EditText)findViewById(R.id.client_address_edit_text);
 			clientPortEditText = (EditText)findViewById(R.id.client_port_edit_text);
 
-			
-			
 			getTemp = (Button) findViewById(R.id.bTemp);
 			getAll = (Button) findViewById(R.id.bAll);
 			getHumidity = (Button) findViewById(R.id.bUmiditate);
